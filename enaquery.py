@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import os
 import subprocess
 import requests
@@ -12,10 +10,15 @@ class QueryException(Exception):
 
 
 class EnaQuery:
+    """Result from querying ena for the given accession
+    Attributes:
+        columns DataFrame of columns and their description
+        table   DataFrame of records for this accession id
+    """
+
     ENA_API = "https://www.ebi.ac.uk/ena/portal/api"
 
     def __init__(self, accession):
-        """Query ena for the given accession"""
         self.columns = self._get_available_columns()
         self.table = self._query(accession, list(self.columns["columnId"]))
 

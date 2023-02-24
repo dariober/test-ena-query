@@ -5,7 +5,7 @@
 <!-- vim-markdown-toc GFM -->
 
 * [Description](#description)
-* [Usage:](#usage)
+* [Usage](#usage)
 * [Set up](#set-up)
 * [Developer](#developer)
 
@@ -19,7 +19,7 @@ Nucleotide Archive ([ENA](https://www.ebi.ac.uk/ena/browser/home))
 The code is functional and tested but it is only meant for demonstration
 purposes.
 
-# Usage:
+# Usage
 
 Query ENA for the given accession id:
 
@@ -58,13 +58,23 @@ ena.download(dryrun=True, library_layout=['SINGLE'])
 
 # Set up
 
-Using [conda](https://docs.conda.io/projects/conda/en/latest/index.html) and
+Ena-query depends only on Python and few extra libraries, see
+[requirements.txt](https://github.com/dariober/test-ena-query/blob/master/requirements.txt).
+
+To set up using [conda](https://docs.conda.io/projects/conda/en/latest/index.html) and
 [mamba](https://github.com/mamba-org/mamba) configured for working with [bioconda](https://bioconda.github.io/):
 
 ```
 mamba create -n test-chipseq --yes
 mamba activate test-chipseq
 mamba install -n test-chipseq --file requirements.txt --yes
+```
+
+For convenience you can copy `enaquery.py` to one of the directories on the
+python path, i.e. one of those from the output of:
+
+```
+python -c "import sys; print(sys.path)"
 ```
 
 # Developer
