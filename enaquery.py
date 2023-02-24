@@ -24,7 +24,8 @@ class EnaQuery:
 
     def download(self, dryrun=False, outdir=".", **kwargs):
         """Download fastq. kwargs are columns to filter results.
-        E.g. download(run_accession=['SRR123', 'SRR456'], taxid=[5821])"""
+        E.g. download(run_accession=['SRR123', 'SRR456'], taxid=[5821])
+        """
         keep = pandas.DataFrame.copy(self.table, deep=True)
         for column in kwargs:
             value = kwargs[column]
