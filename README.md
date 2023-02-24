@@ -1,6 +1,6 @@
 [![test status](https://github.com/dariober/test-ena-query/actions/workflows/main.yml/badge.svg)](https://github.com/dariober/test-ena-query/actions?query=branch%3Amaster+workflow%3Amain)
 [![Language](http://img.shields.io/badge/language-python-blue.svg)](https://www.python.com/)
-[![License](http://img.shields.io/badge/license-MIT-blue.svg)]
+[![License](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dariober/test-ena-query/blob/master/LICENSE.md)
 
 <!-- vim-markdown-toc GFM -->
 
